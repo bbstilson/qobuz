@@ -5,6 +5,8 @@ use crate::{
     data::{self, artists, db::Db, releases},
 };
 
+const DEFAULT_DB_NAME: &str = "music.db3";
+
 pub struct App {
     db: Db,
     api: Api,
@@ -12,11 +14,12 @@ pub struct App {
 
 impl App {
     pub fn init() -> anyhow::Result<Self> {
-        let db = Db::new()?;
-        data::db::init(&db)?;
-
+        let db_path = std::env::var("QOBUZ_DB_PATH").unwrap_or(DEFAULT_DB_NAME.to_string());
         let auth_token = std::env::var("QOBUZ_AUTH_TOKEN")?;
         let app_id = std::env::var("QOBUZ_APP_ID")?;
+
+        let db = Db::new(&db_path)?;
+        data::db::init(&db)?;
 
         let api = Api::new(&auth_token, &app_id)?;
         Ok(Self { db, api })

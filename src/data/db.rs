@@ -1,4 +1,3 @@
-use anyhow::Result;
 use rusqlite::Connection;
 
 pub struct Db {
@@ -6,8 +5,8 @@ pub struct Db {
 }
 
 impl Db {
-    pub fn new() -> Result<Self> {
-        let conn = Connection::open("music.db3")?;
+    pub fn new(db_path: &str) -> anyhow::Result<Self> {
+        let conn = Connection::open(db_path)?;
 
         Ok(Self { conn })
     }
@@ -52,7 +51,7 @@ on conflict (variant) do nothing;
 commit;
 ";
 
-pub fn init(db: &Db) -> Result<()> {
+pub fn init(db: &Db) -> anyhow::Result<()> {
     db.conn.execute_batch(INIT_DB)?;
     Ok(())
 }

@@ -28,6 +28,9 @@ cargo r -- check
 ## Developing
 
 ```bash
+# fmt
+cargo fmt
+
 # clippy
 cargo clippy --tests -- -Dclippy::all -Dclippy::pedantic -Dwarnings
 ```

@@ -1,5 +1,4 @@
-#[allow(clippy::module_inception)]
-mod api;
+mod client;
 pub mod models;
 
-pub use api::Api;
+pub use client::Api;

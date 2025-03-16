@@ -1,4 +1,3 @@
-use anyhow::Result;
 use reqwest::header::HeaderMap;
 
 use crate::api::models::ArtistPage;
@@ -26,7 +25,7 @@ impl Api {
         Ok(Self { client })
     }
 
-    pub async fn get_artist_page(&self, artist_id: u32) -> Result<ArtistPage> {
+    pub async fn get_artist_page(&self, artist_id: u32) -> anyhow::Result<ArtistPage> {
         let request = self
             .client
             .get(format!("{API_BASE}/{ARTIST_PAGE}"))
