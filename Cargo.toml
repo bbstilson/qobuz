@@ -4,10 +4,10 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-reqwest    = { version = "0.12", features = ["cookies", "json"] }
-tokio      = { version = "1.44", features = ["full"] }
 anyhow     = { version = "1" }
-rusqlite   = { version = "0.34.0", features = ["bundled"] }
-serde_json = { version = "*" }
-serde      = { version = "*", features = ["derive"] }
-clap = { version = "4.5.32", features = ["derive"] }
+clap       = { version = "4.5", features = ["derive"] }
+reqwest    = { version = "0.12", features = ["cookies", "json"] }
+rusqlite   = { version = "0.34", features = ["bundled"] }
+serde      = { version = "1", features = ["derive"] }
+serde_json = { version = "1" }
+tokio      = { version = "1.44", features = ["full"] }

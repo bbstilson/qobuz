@@ -33,4 +33,8 @@ cargo fmt
 
 # clippy
 cargo clippy --tests -- -Dclippy::all -Dclippy::pedantic -Dwarnings
+
+# Cargo.toml lints
+cargo sort
+cargo +nightly udeps
 ```
