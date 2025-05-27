@@ -23,6 +23,7 @@ create table if not exists artists (
 create table if not exists releases (
     id text primary key,
     title text not null,
+    created_at timestamp default (datetime('now', 'localtime')) not null,
     release_type_id text not null,
     foreign key (release_type_id) references release_type (variant)
 );
@@ -32,6 +33,19 @@ create table if not exists artists_2_releases (
     release_id text not null,
     primary key (artist_id, release_id),
     foreign key (artist_id) references artists (id),
+    foreign key (release_id) references releases (id)
+);
+
+create table if not exists tracks (
+    id integer primary key,
+    title text not null
+);
+
+create table if not exists tracks_2_releases (
+    release_id text not null,
+    track_id integer not null,
+    primary key (release_id, track_id),
+    foreign key (track_id) references tracks (id),
     foreign key (release_id) references releases (id)
 );
 

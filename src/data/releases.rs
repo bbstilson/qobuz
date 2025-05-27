@@ -25,12 +25,16 @@ values (?1, ?2)
 on conflict (artist_id, release_id) do nothing;
 ";
 
-pub fn insert_batch(db: &Db, artist_id: u32, releases: Vec<Release>) -> anyhow::Result<()> {
+pub fn insert_batch(db: &Db, artist_id: u32, releases: &[Release]) -> anyhow::Result<()> {
     let mut release_stmt = db.conn.prepare(INSERT_RELEASE)?;
     let mut artist_2_release_stmt = db.conn.prepare(INSERT_ARTIST_2_RELEASE)?;
     for release in releases {
-        release_stmt.execute((release.id.clone(), release.title, release.release_type))?;
-        artist_2_release_stmt.execute((artist_id, release.id))?;
+        release_stmt.execute((
+            release.id.clone(),
+            release.title.clone(),
+            release.release_type,
+        ))?;
+        artist_2_release_stmt.execute((artist_id, release.id.clone()))?;
     }
     Ok(())
 }

@@ -2,7 +2,7 @@ use std::collections::{HashMap, HashSet};
 
 use crate::{
     api::Api,
-    data::{self, artists, db::Db, releases},
+    data::{self, artists, db::Db, releases, tracks},
 };
 
 const DEFAULT_DB_NAME: &str = "music.db3";
@@ -53,7 +53,7 @@ impl App {
             .collect::<Vec<_>>();
 
         let num_releases = rels.len();
-        releases::insert_batch(&self.db, artist_id, rels)?;
+        releases::insert_batch(&self.db, artist_id, &rels)?;
         println!("Loaded {num_releases} releases");
 
         Ok(())
@@ -104,7 +104,12 @@ impl App {
                     println!("\t{}", &new_release.title);
                 }
 
-                releases::insert_batch(&self.db, artist.id, rels)?;
+                releases::insert_batch(&self.db, artist.id, &rels)?;
+
+                for release in &rels {
+                    let tracks = self.api.get_release_tracks(&release.id).await?;
+                    tracks::insert_batch(&self.db, &release.id, tracks)?;
+                }
             }
         }
 
@@ -112,6 +117,26 @@ impl App {
             println!("No new music found");
         }
 
+        Ok(())
+    }
+
+    pub fn list_artists(&self) -> anyhow::Result<()> {
+        let mut artists = artists::get_all(&self.db)?
+            .into_iter()
+            .map(|a| a.name)
+            .collect::<Vec<_>>();
+        artists.sort_by_key(|a| a.to_lowercase());
+        for artist in artists {
+            println!("{artist}");
+        }
+        Ok(())
+    }
+
+    pub async fn gen_playlist(&self) -> anyhow::Result<()> {
+        let now = chrono::Local::now().date_naive().to_string();
+        let latest = tracks::get_after(&self.db, now)?;
+        let name = self.api.create_playlist(latest).await?;
+        println!("Created playlist: {name}");
         Ok(())
     }
 }

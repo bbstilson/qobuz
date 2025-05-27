@@ -26,3 +26,24 @@ pub struct Release {
     pub id: String,
     pub title: String,
 }
+
+#[derive(Deserialize, Debug, Clone)]
+pub struct NewPlaylist {
+    pub id: i32,
+}
+
+#[derive(Deserialize, Debug, Clone)]
+pub struct AlbumPage {
+    pub tracks: Tracks,
+}
+
+#[derive(Deserialize, Debug, Clone)]
+pub struct Tracks {
+    pub items: Vec<Track>,
+}
+
+#[derive(Deserialize, Debug, Clone)]
+pub struct Track {
+    pub id: i32,
+    pub title: String,
+}
