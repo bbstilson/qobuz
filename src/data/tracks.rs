@@ -34,7 +34,7 @@ where r.created_at >= ?1;
 /// Gets all tracks inserted into the database after the provided timestamp.
 /// This timestamp *not* when the track was released. Just when it was added to
 /// the database.
-pub fn get_after(db: &Db, ts: String) -> anyhow::Result<Vec<i32>> {
+pub fn get_after(db: &Db, ts: &str) -> anyhow::Result<Vec<u32>> {
     let mut stmt = db.conn.prepare(GET_AFTER)?;
     let releases = stmt.query_map((ts,), |row| row.get(0))?;
     let result = releases.map(|a| a.unwrap()).collect();

@@ -70,10 +70,9 @@ impl Api {
         Ok(items)
     }
 
-    pub async fn create_playlist(&self, track_ids: Vec<i32>) -> anyhow::Result<String> {
-        let now = chrono::Local::now().date_naive().to_string();
+    pub async fn create_playlist(&self, name: &str, track_ids: Vec<u32>) -> anyhow::Result<u32> {
         let form = [
-            ("name", now.as_str()),
+            ("name", name),
             ("description", ""),
             ("is_public", "false"),
             ("is_collaborative", "false"),
@@ -102,6 +101,7 @@ impl Api {
             .form(&form);
 
         request.send().await?;
-        Ok(now)
+
+        Ok(id)
     }
 }

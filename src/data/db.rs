@@ -63,6 +63,14 @@ insert into release_type (variant) values
     ('Other')
 on conflict (variant) do nothing;
 
+create table if not exists playlists (
+    id integer primary key,
+    name text not null,
+    created_at timestamp default (datetime('now', 'localtime')) not null
+);
+
+create index if not exists playlists__created_at on playlists (created_at);
+
 commit;
 ";
 

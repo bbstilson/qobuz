@@ -4,7 +4,7 @@ use anyhow::Context;
 
 use crate::{
     api::Api,
-    data::{self, artists, db::Db, releases, tracks},
+    data::{self, artists, db::Db, playlists, releases, tracks},
 };
 
 const DEFAULT_DB_NAME: &str = "music.db3";
@@ -187,10 +187,21 @@ impl App {
     /// # Errors
     /// Will return `Err` if there's an issue.
     pub async fn gen_playlist(&self) -> anyhow::Result<()> {
-        let now = chrono::Local::now().date_naive().to_string();
-        let latest = tracks::get_after(&self.db, now)?;
-        let name = self.api.create_playlist(latest).await?;
+        let name = chrono::Local::now().date_naive().to_string();
+        let track_ids = tracks::get_after(&self.db, &name)?;
+        let id = self.api.create_playlist(&name, track_ids).await?;
+        playlists::insert(
+            &self.db,
+            &playlists::Playlist {
+                id,
+                name: name.clone(),
+                ..Default::default()
+            },
+        )
+        .context("playlists::insert")?;
+
         println!("Created playlist: {name}");
+
         Ok(())
     }
 }

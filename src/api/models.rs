@@ -29,7 +29,7 @@ pub struct Release {
 
 #[derive(Deserialize, Debug, Clone)]
 pub struct NewPlaylist {
-    pub id: i32,
+    pub id: u32,
 }
 
 #[derive(Deserialize, Debug, Clone)]
@@ -44,6 +44,6 @@ pub struct Tracks {
 
 #[derive(Deserialize, Debug, Clone)]
 pub struct Track {
-    pub id: i32,
+    pub id: u32,
     pub title: String,
 }
