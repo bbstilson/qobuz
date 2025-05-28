@@ -1,5 +1,7 @@
 use std::collections::{HashMap, HashSet};
 
+use anyhow::Context;
+
 use crate::{
     api::Api,
     data::{self, artists, db::Db, releases, tracks},
@@ -13,6 +15,9 @@ pub struct App {
 }
 
 impl App {
+    /// Initializes an App.
+    /// # Errors
+    /// Will return `Err` if there's an issue.
     pub fn init() -> anyhow::Result<Self> {
         let db_path = std::env::var("QOBUZ_DB_PATH").unwrap_or(DEFAULT_DB_NAME.to_string());
         let auth_token = std::env::var("QOBUZ_AUTH_TOKEN")?;
@@ -25,6 +30,9 @@ impl App {
         Ok(Self { db, api })
     }
 
+    /// Loads an artist into the database.
+    /// # Errors
+    /// Will return `Err` if there's an issue.
     pub async fn load_artist(&self, artist_id: u32) -> anyhow::Result<()> {
         let artist_page = self.api.get_artist_page(artist_id).await?;
 
@@ -59,10 +67,13 @@ impl App {
         Ok(())
     }
 
+    /// Checks for new releases from artists in the database.
+    /// # Errors
+    /// Will return `Err` if there's an issue.
     pub async fn check_for_new_releases(&self) -> anyhow::Result<()> {
         let all_artists = artists::get_all(&self.db)?;
-        println!("Checking {} artists", all_artists.len());
-        let mut new_music_found = false;
+        println!("Checking {} artists\n", all_artists.len());
+        let mut all_new_releases = HashMap::new();
         for artist in all_artists {
             let existing_release_ids = releases::get_all_ids_for_artist(&self.db, artist.id)?
                 .into_iter()
@@ -85,12 +96,6 @@ impl App {
                 .collect::<Vec<_>>();
 
             if !new_releases.is_empty() {
-                new_music_found = true;
-                println!(
-                    "Found {} new release(s) for {}!",
-                    new_releases.len(),
-                    artist.name
-                );
                 let rels = new_releases
                     .into_iter()
                     .map(|(release_type, release)| releases::Release {
@@ -100,26 +105,72 @@ impl App {
                     })
                     .collect::<Vec<_>>();
 
-                for new_release in &rels {
-                    println!("\t{}", &new_release.title);
-                }
-
-                releases::insert_batch(&self.db, artist.id, &rels)?;
-
-                for release in &rels {
-                    let tracks = self.api.get_release_tracks(&release.id).await?;
-                    tracks::insert_batch(&self.db, &release.id, tracks)?;
-                }
+                all_new_releases.insert(artist, rels);
             }
         }
 
-        if !new_music_found {
+        if all_new_releases.is_empty() {
             println!("No new music found");
+            return Ok(());
+        }
+
+        for (artist, new_releases) in all_new_releases {
+            // Not all found releases are real. We need to wait until we
+            // confirm the release tracks can be loaded. Sometimes releases
+            // 404 or don't have tracks.
+            releases::insert_batch(&self.db, artist.id, &new_releases)
+                .context("releases::insert_batch")?;
+
+            let mut loaded_releases = vec![];
+            for release in new_releases {
+                let tracks = self
+                    .api
+                    .get_release_tracks(&release.id)
+                    .await
+                    .context("api.get_release_tracks")?;
+
+                if tracks.is_empty() {
+                    continue;
+                }
+
+                loaded_releases.push(release.title);
+                tracks::insert_batch(&self.db, &release.id, tracks)
+                    .context("tracks::insert_batch")?;
+            }
+
+            // All the releases were bogus. Go to the next artist.
+            if loaded_releases.is_empty() {
+                continue;
+            }
+
+            // Finalize the loaded releases.
+            releases::bulk_verify(&self.db, &loaded_releases).context("releases::bulk_verify")?;
+
+            // Let the user know what happened.
+            let num_releases = loaded_releases.len();
+            let release_msg = if num_releases == 1 {
+                "release"
+            } else {
+                "releases"
+            };
+            println!(
+                "Found {num_releases} new {release_msg} for {}!",
+                artist.name
+            );
+            let release_log = loaded_releases
+                .iter()
+                .map(|r| format!("\t • {r}"))
+                .collect::<Vec<_>>()
+                .join("\n");
+            println!("{release_log}");
         }
 
         Ok(())
     }
 
+    /// List artists in the database.
+    /// # Errors
+    /// Will return `Err` if there's an issue.
     pub fn list_artists(&self) -> anyhow::Result<()> {
         let mut artists = artists::get_all(&self.db)?
             .into_iter()
@@ -132,6 +183,9 @@ impl App {
         Ok(())
     }
 
+    /// Generate a playlist for latest releases.
+    /// # Errors
+    /// Will return `Err` if there's an issue.
     pub async fn gen_playlist(&self) -> anyhow::Result<()> {
         let now = chrono::Local::now().date_naive().to_string();
         let latest = tracks::get_after(&self.db, now)?;

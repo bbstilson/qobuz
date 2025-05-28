@@ -1,0 +1,1015 @@
+{
+  "id": 13925362,
+  "name": {
+    "display": "AVRALIZE"
+  },
+  "artist_category": "performer",
+  "biography": null,
+  "images": {
+    "portrait": null
+  },
+  "similar_artists": {
+    "has_more": false,
+    "items": []
+  },
+  "top_tracks": [
+    {
+      "id": 252422061,
+      "isrc": "DEYO62400017",
+      "title": "OVERDOSE",
+      "work": null,
+      "version": null,
+      "duration": 321,
+      "parental_warning": false,
+      "composer": {
+        "id": 12040460,
+        "name": {
+          "display": "Severin Sailer"
+        }
+      },
+      "artist": {
+        "id": 13925362,
+        "name": {
+          "display": "AVRALIZE"
+        }
+      },
+      "artists": [],
+      "audio_info": {
+        "maximum_bit_depth": 24,
+        "maximum_channel_count": 2,
+        "maximum_sampling_rate": 44.1
+      },
+      "rights": {
+        "streamable": true,
+        "hires_streamable": true,
+        "hires_purchasable": true,
+        "purchasable": true,
+        "downloadable": true,
+        "previewable": true,
+        "sampleable": true
+      },
+      "physical_support": {
+        "media_number": 1,
+        "track_number": 7
+      },
+      "album": {
+        "id": "hw971g1ngzxca",
+        "title": "FREAKS",
+        "version": null,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_600.jpg"
+        },
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922
+        },
+        "genre": {
+          "id": 116,
+          "name": "Metal",
+          "path": [116]
+        }
+      }
+    },
+    {
+      "id": 252422059,
+      "isrc": "DEYO62400016",
+      "title": "CANVAS",
+      "work": null,
+      "version": null,
+      "duration": 256,
+      "parental_warning": false,
+      "composer": {
+        "id": 12040460,
+        "name": {
+          "display": "Severin Sailer"
+        }
+      },
+      "artist": {
+        "id": 13925362,
+        "name": {
+          "display": "AVRALIZE"
+        }
+      },
+      "artists": [],
+      "audio_info": {
+        "maximum_bit_depth": 24,
+        "maximum_channel_count": 2,
+        "maximum_sampling_rate": 44.1
+      },
+      "rights": {
+        "streamable": true,
+        "hires_streamable": true,
+        "hires_purchasable": true,
+        "purchasable": true,
+        "downloadable": true,
+        "previewable": true,
+        "sampleable": true
+      },
+      "physical_support": {
+        "media_number": 1,
+        "track_number": 5
+      },
+      "album": {
+        "id": "hw971g1ngzxca",
+        "title": "FREAKS",
+        "version": null,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_600.jpg"
+        },
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922
+        },
+        "genre": {
+          "id": 116,
+          "name": "Metal",
+          "path": [116]
+        }
+      }
+    },
+    {
+      "id": 252422055,
+      "isrc": "DEYO62300155",
+      "title": "LOTUS",
+      "work": null,
+      "version": null,
+      "duration": 287,
+      "parental_warning": false,
+      "composer": {
+        "id": 2109279,
+        "name": {
+          "display": "Manuel Renner"
+        }
+      },
+      "artist": {
+        "id": 13925362,
+        "name": {
+          "display": "AVRALIZE"
+        }
+      },
+      "artists": [],
+      "audio_info": {
+        "maximum_bit_depth": 16,
+        "maximum_channel_count": 2,
+        "maximum_sampling_rate": 44.1
+      },
+      "rights": {
+        "streamable": true,
+        "hires_streamable": false,
+        "hires_purchasable": false,
+        "purchasable": true,
+        "downloadable": true,
+        "previewable": true,
+        "sampleable": true
+      },
+      "physical_support": {
+        "media_number": 1,
+        "track_number": 1
+      },
+      "album": {
+        "id": "hw971g1ngzxca",
+        "title": "FREAKS",
+        "version": null,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_600.jpg"
+        },
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922
+        },
+        "genre": {
+          "id": 116,
+          "name": "Metal",
+          "path": [116]
+        }
+      }
+    },
+    {
+      "id": 252422056,
+      "isrc": "DEYO62400006",
+      "title": "HIGHER",
+      "work": null,
+      "version": null,
+      "duration": 252,
+      "parental_warning": false,
+      "composer": {
+        "id": 12040460,
+        "name": {
+          "display": "Severin Sailer"
+        }
+      },
+      "artist": {
+        "id": 13925362,
+        "name": {
+          "display": "AVRALIZE"
+        }
+      },
+      "artists": [],
+      "audio_info": {
+        "maximum_bit_depth": 24,
+        "maximum_channel_count": 2,
+        "maximum_sampling_rate": 44.1
+      },
+      "rights": {
+        "streamable": true,
+        "hires_streamable": true,
+        "hires_purchasable": true,
+        "purchasable": true,
+        "downloadable": true,
+        "previewable": true,
+        "sampleable": true
+      },
+      "physical_support": {
+        "media_number": 1,
+        "track_number": 2
+      },
+      "album": {
+        "id": "hw971g1ngzxca",
+        "title": "FREAKS",
+        "version": null,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_600.jpg"
+        },
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922
+        },
+        "genre": {
+          "id": 116,
+          "name": "Metal",
+          "path": [116]
+        }
+      }
+    },
+    {
+      "id": 252422057,
+      "isrc": "QZK6N2332351",
+      "title": "BRIGHT",
+      "work": null,
+      "version": null,
+      "duration": 267,
+      "parental_warning": false,
+      "composer": {
+        "id": 12040460,
+        "name": {
+          "display": "Severin Sailer"
+        }
+      },
+      "artist": {
+        "id": 13925362,
+        "name": {
+          "display": "AVRALIZE"
+        }
+      },
+      "artists": [],
+      "audio_info": {
+        "maximum_bit_depth": 16,
+        "maximum_channel_count": 2,
+        "maximum_sampling_rate": 44.1
+      },
+      "rights": {
+        "streamable": true,
+        "hires_streamable": false,
+        "hires_purchasable": false,
+        "purchasable": true,
+        "downloadable": true,
+        "previewable": true,
+        "sampleable": true
+      },
+      "physical_support": {
+        "media_number": 1,
+        "track_number": 3
+      },
+      "album": {
+        "id": "hw971g1ngzxca",
+        "title": "FREAKS",
+        "version": null,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_600.jpg"
+        },
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922
+        },
+        "genre": {
+          "id": 116,
+          "name": "Metal",
+          "path": [116]
+        }
+      }
+    },
+    {
+      "id": 252422058,
+      "isrc": "QZNWT2313402",
+      "title": "STAB BY STAB",
+      "work": null,
+      "version": null,
+      "duration": 178,
+      "parental_warning": false,
+      "composer": {
+        "id": 12040460,
+        "name": {
+          "display": "Severin Sailer"
+        }
+      },
+      "artist": {
+        "id": 13925362,
+        "name": {
+          "display": "AVRALIZE"
+        }
+      },
+      "artists": [],
+      "audio_info": {
+        "maximum_bit_depth": 16,
+        "maximum_channel_count": 2,
+        "maximum_sampling_rate": 44.1
+      },
+      "rights": {
+        "streamable": true,
+        "hires_streamable": false,
+        "hires_purchasable": false,
+        "purchasable": true,
+        "downloadable": true,
+        "previewable": true,
+        "sampleable": true
+      },
+      "physical_support": {
+        "media_number": 1,
+        "track_number": 4
+      },
+      "album": {
+        "id": "hw971g1ngzxca",
+        "title": "FREAKS",
+        "version": null,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_600.jpg"
+        },
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922
+        },
+        "genre": {
+          "id": 116,
+          "name": "Metal",
+          "path": [116]
+        }
+      }
+    },
+    {
+      "id": 287338920,
+      "isrc": "DEYO62400237",
+      "title": "upside down",
+      "work": null,
+      "version": null,
+      "duration": 244,
+      "parental_warning": false,
+      "composer": {
+        "id": 12040460,
+        "name": {
+          "display": "Severin Sailer"
+        }
+      },
+      "artist": {
+        "id": 13925362,
+        "name": {
+          "display": "AVRALIZE"
+        }
+      },
+      "artists": [],
+      "audio_info": {
+        "maximum_bit_depth": 24,
+        "maximum_channel_count": 2,
+        "maximum_sampling_rate": 44.1
+      },
+      "rights": {
+        "streamable": true,
+        "hires_streamable": true,
+        "hires_purchasable": true,
+        "purchasable": true,
+        "downloadable": true,
+        "previewable": true,
+        "sampleable": true
+      },
+      "physical_support": {
+        "media_number": 1,
+        "track_number": 1
+      },
+      "album": {
+        "id": "druz927437bmb",
+        "title": "upside down",
+        "version": null,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/mb/7b/druz927437bmb_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/mb/7b/druz927437bmb_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/mb/7b/druz927437bmb_600.jpg"
+        },
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922
+        },
+        "genre": {
+          "id": 116,
+          "name": "Metal",
+          "path": [116]
+        }
+      }
+    },
+    {
+      "id": 311796160,
+      "isrc": "DEYO62400382",
+      "title": "wanderlust",
+      "work": null,
+      "version": null,
+      "duration": 172,
+      "parental_warning": false,
+      "composer": {
+        "id": 12040460,
+        "name": {
+          "display": "Severin Sailer"
+        }
+      },
+      "artist": {
+        "id": 13925362,
+        "name": {
+          "display": "AVRALIZE"
+        }
+      },
+      "artists": [],
+      "audio_info": {
+        "maximum_bit_depth": 24,
+        "maximum_channel_count": 2,
+        "maximum_sampling_rate": 44.1
+      },
+      "rights": {
+        "streamable": true,
+        "hires_streamable": true,
+        "hires_purchasable": true,
+        "purchasable": true,
+        "downloadable": true,
+        "previewable": true,
+        "sampleable": true
+      },
+      "physical_support": {
+        "media_number": 1,
+        "track_number": 1
+      },
+      "album": {
+        "id": "u0oo8jj37boxb",
+        "title": "wanderlust",
+        "version": null,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/xb/bo/u0oo8jj37boxb_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/xb/bo/u0oo8jj37boxb_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/xb/bo/u0oo8jj37boxb_600.jpg"
+        },
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922
+        },
+        "genre": {
+          "id": 116,
+          "name": "Metal",
+          "path": [116]
+        }
+      }
+    },
+    {
+      "id": 331521897,
+      "isrc": "DEYO62500252",
+      "title": "helium",
+      "work": null,
+      "version": null,
+      "duration": 215,
+      "parental_warning": false,
+      "composer": {
+        "id": 12040460,
+        "name": {
+          "display": "Severin Sailer"
+        }
+      },
+      "artist": {
+        "id": 13925362,
+        "name": {
+          "display": "AVRALIZE"
+        }
+      },
+      "artists": [],
+      "audio_info": {
+        "maximum_bit_depth": 24,
+        "maximum_channel_count": 2,
+        "maximum_sampling_rate": 44.1
+      },
+      "rights": {
+        "streamable": true,
+        "hires_streamable": true,
+        "hires_purchasable": true,
+        "purchasable": true,
+        "downloadable": true,
+        "previewable": true,
+        "sampleable": true
+      },
+      "physical_support": {
+        "media_number": 1,
+        "track_number": 1
+      },
+      "album": {
+        "id": "na99v5xa7s26a",
+        "title": "helium",
+        "version": null,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/6a/s2/na99v5xa7s26a_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/6a/s2/na99v5xa7s26a_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/6a/s2/na99v5xa7s26a_600.jpg"
+        },
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922
+        },
+        "genre": {
+          "id": 116,
+          "name": "Metal",
+          "path": [116]
+        }
+      }
+    }
+  ],
+  "last_release": {
+    "id": "na99v5xa7s26a",
+    "title": "helium",
+    "version": null,
+    "tracks_count": 3,
+    "artist": {
+      "id": 13925362,
+      "name": {
+        "display": "AVRALIZE"
+      }
+    },
+    "artists": [
+      {
+        "id": 13925362,
+        "name": "AVRALIZE",
+        "roles": ["main-artist"]
+      }
+    ],
+    "image": {
+      "small": "https://static.qobuz.com/images/covers/6a/s2/na99v5xa7s26a_230.jpg",
+      "thumbnail": "https://static.qobuz.com/images/covers/6a/s2/na99v5xa7s26a_50.jpg",
+      "large": "https://static.qobuz.com/images/covers/6a/s2/na99v5xa7s26a_600.jpg"
+    },
+    "label": {
+      "id": 1130922,
+      "name": "Arising Empire"
+    },
+    "genre": {
+      "id": 116,
+      "name": "Metal",
+      "path": [116]
+    },
+    "release_type": "single",
+    "release_tags": [],
+    "duration": 631,
+    "dates": {
+      "download": "2025-05-09",
+      "original": "2025-05-09",
+      "stream": "2025-05-09"
+    },
+    "parental_warning": false,
+    "audio_info": {
+      "maximum_bit_depth": 24,
+      "maximum_channel_count": 2,
+      "maximum_sampling_rate": 44.1
+    },
+    "rights": {
+      "purchasable": true,
+      "streamable": true,
+      "downloadable": true,
+      "hires_streamable": true,
+      "hires_purchasable": true
+    },
+    "description": ""
+  },
+  "releases": [
+    {
+      "type": "album",
+      "has_more": false,
+      "items": [
+        {
+          "id": "hw971g1ngzxca",
+          "title": "FREAKS",
+          "version": null,
+          "tracks_count": 8,
+          "artist": {
+            "id": 13925362,
+            "name": {
+              "display": "AVRALIZE"
+            }
+          },
+          "artists": [
+            {
+              "id": 13925362,
+              "name": "AVRALIZE",
+              "roles": ["main-artist"]
+            }
+          ],
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_600.jpg"
+          },
+          "label": {
+            "id": 1130922,
+            "name": "Arising Empire"
+          },
+          "genre": {
+            "id": 116,
+            "name": "Metal",
+            "path": [116]
+          },
+          "release_type": "album",
+          "release_tags": [],
+          "duration": 2088,
+          "dates": {
+            "download": "2024-03-22",
+            "original": "2024-03-22",
+            "stream": "2024-03-22"
+          },
+          "parental_warning": true,
+          "audio_info": {
+            "maximum_bit_depth": 24,
+            "maximum_channel_count": 2,
+            "maximum_sampling_rate": 44.1
+          },
+          "rights": {
+            "purchasable": true,
+            "streamable": true,
+            "downloadable": true,
+            "hires_streamable": true,
+            "hires_purchasable": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "live",
+      "has_more": false,
+      "items": []
+    },
+    {
+      "type": "compilation",
+      "has_more": false,
+      "items": []
+    },
+    {
+      "type": "epSingle",
+      "has_more": true,
+      "items": [
+        {
+          "id": "u0oo8jj37boxb",
+          "title": "wanderlust",
+          "version": null,
+          "tracks_count": 2,
+          "artist": {
+            "id": 13925362,
+            "name": {
+              "display": "AVRALIZE"
+            }
+          },
+          "artists": [
+            {
+              "id": 13925362,
+              "name": "AVRALIZE",
+              "roles": ["main-artist"]
+            }
+          ],
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/xb/bo/u0oo8jj37boxb_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/xb/bo/u0oo8jj37boxb_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/xb/bo/u0oo8jj37boxb_600.jpg"
+          },
+          "label": {
+            "id": 1130922,
+            "name": "Arising Empire"
+          },
+          "genre": {
+            "id": 116,
+            "name": "Metal",
+            "path": [116]
+          },
+          "release_type": "single",
+          "release_tags": [],
+          "duration": 416,
+          "dates": {
+            "download": "2025-01-16",
+            "original": "2025-01-16",
+            "stream": "2025-01-16"
+          },
+          "parental_warning": false,
+          "audio_info": {
+            "maximum_bit_depth": 24,
+            "maximum_channel_count": 2,
+            "maximum_sampling_rate": 44.1
+          },
+          "rights": {
+            "purchasable": true,
+            "streamable": true,
+            "downloadable": true,
+            "hires_streamable": true,
+            "hires_purchasable": true
+          }
+        },
+        {
+          "id": "druz927437bmb",
+          "title": "upside down",
+          "version": null,
+          "tracks_count": 1,
+          "artist": {
+            "id": 13925362,
+            "name": {
+              "display": "AVRALIZE"
+            }
+          },
+          "artists": [
+            {
+              "id": 13925362,
+              "name": "AVRALIZE",
+              "roles": ["main-artist"]
+            }
+          ],
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/mb/7b/druz927437bmb_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/mb/7b/druz927437bmb_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/mb/7b/druz927437bmb_600.jpg"
+          },
+          "label": {
+            "id": 1130922,
+            "name": "Arising Empire"
+          },
+          "genre": {
+            "id": 116,
+            "name": "Metal",
+            "path": [116]
+          },
+          "release_type": "single",
+          "release_tags": [],
+          "duration": 244,
+          "dates": {
+            "download": "2024-09-20",
+            "original": "2024-09-20",
+            "stream": "2024-09-20"
+          },
+          "parental_warning": false,
+          "audio_info": {
+            "maximum_bit_depth": 24,
+            "maximum_channel_count": 2,
+            "maximum_sampling_rate": 44.1
+          },
+          "rights": {
+            "purchasable": true,
+            "streamable": true,
+            "downloadable": true,
+            "hires_streamable": true,
+            "hires_purchasable": true
+          }
+        },
+        {
+          "id": "ouedat5wnudda",
+          "title": "OVERDOSE",
+          "version": null,
+          "tracks_count": 7,
+          "artist": {
+            "id": 13925362,
+            "name": {
+              "display": "AVRALIZE"
+            }
+          },
+          "artists": [
+            {
+              "id": 13925362,
+              "name": "AVRALIZE",
+              "roles": ["main-artist"]
+            }
+          ],
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/da/ud/ouedat5wnudda_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/da/ud/ouedat5wnudda_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/da/ud/ouedat5wnudda_600.jpg"
+          },
+          "label": {
+            "id": 1130922,
+            "name": "Arising Empire"
+          },
+          "genre": {
+            "id": 116,
+            "name": "Metal",
+            "path": [116]
+          },
+          "release_type": "single",
+          "release_tags": [],
+          "duration": 1832,
+          "dates": {
+            "download": "2024-03-01",
+            "original": "2024-03-01",
+            "stream": "2024-03-01"
+          },
+          "parental_warning": true,
+          "audio_info": {
+            "maximum_bit_depth": 24,
+            "maximum_channel_count": 2,
+            "maximum_sampling_rate": 44.1
+          },
+          "rights": {
+            "purchasable": true,
+            "streamable": true,
+            "downloadable": true,
+            "hires_streamable": true,
+            "hires_purchasable": true
+          }
+        },
+        {
+          "id": "he30uiwa4lyra",
+          "title": "HIGHER",
+          "version": null,
+          "tracks_count": 6,
+          "artist": {
+            "id": 13925362,
+            "name": {
+              "display": "AVRALIZE"
+            }
+          },
+          "artists": [
+            {
+              "id": 13925362,
+              "name": "AVRALIZE",
+              "roles": ["main-artist"]
+            }
+          ],
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/ra/ly/he30uiwa4lyra_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/ra/ly/he30uiwa4lyra_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/ra/ly/he30uiwa4lyra_600.jpg"
+          },
+          "label": {
+            "id": 1130922,
+            "name": "Arising Empire"
+          },
+          "genre": {
+            "id": 116,
+            "name": "Metal",
+            "path": [116]
+          },
+          "release_type": "single",
+          "release_tags": [],
+          "duration": 1511,
+          "dates": {
+            "download": "2024-02-09",
+            "original": "2024-02-09",
+            "stream": "2024-02-09"
+          },
+          "parental_warning": true,
+          "audio_info": {
+            "maximum_bit_depth": 24,
+            "maximum_channel_count": 2,
+            "maximum_sampling_rate": 44.1
+          },
+          "rights": {
+            "purchasable": true,
+            "streamable": true,
+            "downloadable": true,
+            "hires_streamable": true,
+            "hires_purchasable": true
+          }
+        },
+        {
+          "id": "mwff2lq9bamab",
+          "title": "LOTUS",
+          "version": null,
+          "tracks_count": 5,
+          "artist": {
+            "id": 13925362,
+            "name": {
+              "display": "AVRALIZE"
+            }
+          },
+          "artists": [
+            {
+              "id": 13925362,
+              "name": "AVRALIZE",
+              "roles": ["main-artist"]
+            }
+          ],
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/ab/am/mwff2lq9bamab_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/ab/am/mwff2lq9bamab_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/ab/am/mwff2lq9bamab_600.jpg"
+          },
+          "label": {
+            "id": 1130922,
+            "name": "Arising Empire"
+          },
+          "genre": {
+            "id": 116,
+            "name": "Metal",
+            "path": [116]
+          },
+          "release_type": "single",
+          "release_tags": [],
+          "duration": 1259,
+          "dates": {
+            "download": "2024-01-16",
+            "original": "2024-01-16",
+            "stream": "2024-01-16"
+          },
+          "parental_warning": true,
+          "audio_info": {
+            "maximum_bit_depth": 16,
+            "maximum_channel_count": 2,
+            "maximum_sampling_rate": 44.1
+          },
+          "rights": {
+            "purchasable": true,
+            "streamable": true,
+            "downloadable": true,
+            "hires_streamable": false,
+            "hires_purchasable": false
+          }
+        },
+        {
+          "id": "sqt4dyhyxi2qa",
+          "title": "STAB BY STAB",
+          "version": null,
+          "tracks_count": 1,
+          "artist": {
+            "id": 13925362,
+            "name": {
+              "display": "AVRALIZE"
+            }
+          },
+          "artists": [
+            {
+              "id": 13925362,
+              "name": "AVRALIZE",
+              "roles": ["main-artist"]
+            }
+          ],
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/qa/i2/sqt4dyhyxi2qa_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/qa/i2/sqt4dyhyxi2qa_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/qa/i2/sqt4dyhyxi2qa_600.jpg"
+          },
+          "label": {
+            "id": 1130922,
+            "name": "Arising Empire"
+          },
+          "genre": {
+            "id": 116,
+            "name": "Metal",
+            "path": [116]
+          },
+          "release_type": "single",
+          "release_tags": [],
+          "duration": 178,
+          "dates": {
+            "download": "2023-08-11",
+            "original": "2023-08-11",
+            "stream": "2023-08-11"
+          },
+          "parental_warning": false,
+          "audio_info": {
+            "maximum_bit_depth": 16,
+            "maximum_channel_count": 2,
+            "maximum_sampling_rate": 44.1
+          },
+          "rights": {
+            "purchasable": true,
+            "streamable": true,
+            "downloadable": true,
+            "hires_streamable": false,
+            "hires_purchasable": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "download",
+      "has_more": false,
+      "items": []
+    }
+  ],
+  "tracks_appears_on": [],
+  "playlists": {
+    "has_more": false,
+    "items": []
+  }
+}

@@ -1,0 +1,908 @@
+{
+  "maximum_bit_depth": 24,
+  "image": {
+    "small": "https://static.qobuz.com/images/covers/6a/s2/na99v5xa7s26a_230.jpg",
+    "thumbnail": "https://static.qobuz.com/images/covers/6a/s2/na99v5xa7s26a_50.jpg",
+    "large": "https://static.qobuz.com/images/covers/6a/s2/na99v5xa7s26a_600.jpg",
+    "back": null
+  },
+  "media_count": 1,
+  "artist": {
+    "image": null,
+    "name": "AVRALIZE",
+    "id": 13925362,
+    "albums_count": 18,
+    "slug": "avralize",
+    "picture": null
+  },
+  "artists": [
+    {
+      "id": 13925362,
+      "name": "AVRALIZE",
+      "roles": ["main-artist"]
+    }
+  ],
+  "upc": "4069977057550",
+  "released_at": 1746741600,
+  "label": {
+    "name": "Arising Empire",
+    "id": 1130922,
+    "albums_count": 647,
+    "supplier_id": 32,
+    "slug": "arising-empire-4"
+  },
+  "title": "helium",
+  "qobuz_id": 331521896,
+  "version": null,
+  "url": "https://www.qobuz.com/fr-fr/album/helium-avralize/na99v5xa7s26a",
+  "duration": 631,
+  "parental_warning": false,
+  "popularity": 0,
+  "tracks_count": 3,
+  "genre": {
+    "path": [116],
+    "color": "#5eabc1",
+    "name": "Metal",
+    "id": 116,
+    "slug": "metal"
+  },
+  "maximum_channel_count": 2,
+  "id": "na99v5xa7s26a",
+  "maximum_sampling_rate": 44.1,
+  "articles": [],
+  "release_date_original": "2025-05-09",
+  "release_date_download": "2025-05-09",
+  "release_date_stream": "2025-05-09",
+  "purchasable": true,
+  "streamable": true,
+  "previewable": true,
+  "sampleable": true,
+  "downloadable": true,
+  "displayable": true,
+  "purchasable_at": 1747724400,
+  "streamable_at": 1747724400,
+  "hires": true,
+  "hires_streamable": true,
+  "awards": [],
+  "goodies": [],
+  "area": null,
+  "catchline": "",
+  "composer": {
+    "id": 573076,
+    "name": "Various Composers",
+    "slug": "various-composers",
+    "albums_count": 11899964,
+    "picture": null,
+    "image": null
+  },
+  "created_at": 0,
+  "genres_list": [
+    "Pop/Rock",
+    "Pop/Rock\u2192Rock",
+    "Pop/Rock\u2192Rock\u2192Metal"
+  ],
+  "period": null,
+  "copyright": "2025 Arising Empire 2025 Arising Empire",
+  "is_official": true,
+  "maximum_technical_specifications": "24 bits / 44.1 kHz - Stereo",
+  "product_sales_factors_monthly": 0,
+  "product_sales_factors_weekly": 0,
+  "product_sales_factors_yearly": 0,
+  "product_type": "single",
+  "product_url": "/fr-fr/album/helium-avralize/na99v5xa7s26a",
+  "recording_information": "",
+  "relative_url": "/album/helium-avralize/na99v5xa7s26a",
+  "release_tags": [],
+  "release_type": "single",
+  "slug": "helium-avralize",
+  "subtitle": "AVRALIZE",
+  "track_ids": [331521897, 331521898, 331521899],
+  "tracks": {
+    "offset": 0,
+    "limit": 50,
+    "total": 3,
+    "items": [
+      {
+        "maximum_bit_depth": 24,
+        "copyright": "2025 Arising Empire 2025 Arising Empire",
+        "performers": "Copyright Control, MusicPublisher - Manuel Renner, Composer, Lyricist, Producer, Mixer, Mastering Engineer - Valentin Noack, Composer, Electric Bass Guitar - Severin Sailer, Composer, Lyricist, Vocals - Philipp Tenberken, Composer, Electric Guitar - Bastian G\u00f6lz, Composer, Producer, Drums - AVRALIZE, Artist, MainArtist",
+        "audio_info": {
+          "replaygain_track_peak": 0.988586,
+          "replaygain_track_gain": -11.72
+        },
+        "performer": {
+          "name": "AVRALIZE",
+          "id": 13925362
+        },
+        "work": null,
+        "composer": {
+          "name": "Severin Sailer",
+          "id": 12040460
+        },
+        "isrc": "DEYO62500252",
+        "title": "helium",
+        "version": null,
+        "duration": 215,
+        "parental_warning": false,
+        "track_number": 1,
+        "maximum_channel_count": 2,
+        "id": 331521897,
+        "media_number": 1,
+        "maximum_sampling_rate": 44.1,
+        "release_date_original": "2025-05-09",
+        "release_date_download": "2025-05-09",
+        "release_date_stream": "2025-05-09",
+        "release_date_purchase": "2025-05-09",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1747724400,
+        "streamable_at": 1747724400,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 24,
+        "copyright": "2025 Arising Empire 2025 Arising Empire",
+        "performers": "Copyright Control, MusicPublisher - Manuel Renner, Composer, Lyricist, Producer, Mixer, Mastering Engineer - Valentin Noack, Composer, Electric Bass Guitar - Severin Sailer, Composer, Lyricist, Vocals - Philipp Tenberken, Composer, Electric Guitar - Bastian G\u00f6lz, Composer, Lyricist, Producer, Drums - AVRALIZE, Artist, MainArtist",
+        "audio_info": {
+          "replaygain_track_peak": 0.988586,
+          "replaygain_track_gain": -12.36
+        },
+        "performer": {
+          "name": "AVRALIZE",
+          "id": 13925362
+        },
+        "work": null,
+        "composer": {
+          "name": "Severin Sailer",
+          "id": 12040460
+        },
+        "isrc": "DEYO62400382",
+        "title": "wanderlust",
+        "version": null,
+        "duration": 172,
+        "parental_warning": false,
+        "track_number": 2,
+        "maximum_channel_count": 2,
+        "id": 331521898,
+        "media_number": 1,
+        "maximum_sampling_rate": 44.1,
+        "release_date_original": "2025-05-09",
+        "release_date_download": "2025-05-09",
+        "release_date_stream": "2025-05-09",
+        "release_date_purchase": "2025-05-09",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1747724400,
+        "streamable_at": 1747724400,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 24,
+        "copyright": "2025 Arising Empire 2024 Arising Empire",
+        "performers": "Copyright Control, MusicPublisher - Manuel Renner, Composer, Lyricist, Producer - Valentin Noack, Composer, Electric Bass Guitar - Severin Sailer, Composer, Lyricist, Vocals - Philipp Tenberken, Composer, Electric Guitar - Bastian G\u00f6lz, Composer, Producer, Drums - AVRALIZE, Artist, MainArtist",
+        "audio_info": {
+          "replaygain_track_peak": 1,
+          "replaygain_track_gain": -11.8
+        },
+        "performer": {
+          "name": "AVRALIZE",
+          "id": 13925362
+        },
+        "work": null,
+        "composer": {
+          "name": "Severin Sailer",
+          "id": 12040460
+        },
+        "isrc": "DEYO62400237",
+        "title": "upside down",
+        "version": null,
+        "duration": 244,
+        "parental_warning": false,
+        "track_number": 3,
+        "maximum_channel_count": 2,
+        "id": 331521899,
+        "media_number": 1,
+        "maximum_sampling_rate": 44.1,
+        "release_date_original": "2025-05-09",
+        "release_date_download": "2025-05-09",
+        "release_date_stream": "2025-05-09",
+        "release_date_purchase": "2025-05-09",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1747724400,
+        "streamable_at": 1747724400,
+        "hires": true,
+        "hires_streamable": true
+      }
+    ]
+  },
+  "albums_same_artist": {
+    "items": [
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/xb/bo/u0oo8jj37boxb_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/xb/bo/u0oo8jj37boxb_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/xb/bo/u0oo8jj37boxb_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "AVRALIZE",
+          "id": 13925362,
+          "albums_count": 18,
+          "slug": "avralize",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 13925362,
+            "name": "AVRALIZE",
+            "roles": ["main-artist"]
+          }
+        ],
+        "upc": "4056813969504",
+        "released_at": 1736982000,
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922,
+          "albums_count": 643,
+          "supplier_id": 32,
+          "slug": "arising-empire-4"
+        },
+        "title": "wanderlust",
+        "qobuz_id": 311796159,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/wanderlust-avralize/u0oo8jj37boxb",
+        "duration": 416,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [116],
+          "color": "#5eabc1",
+          "name": "Metal",
+          "id": 116,
+          "slug": "metal"
+        },
+        "maximum_channel_count": 2,
+        "id": "u0oo8jj37boxb",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-01-16",
+        "release_date_download": "2025-01-16",
+        "release_date_stream": "2025-01-16",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1746428400,
+        "streamable_at": 1746428400,
+        "hires": true,
+        "hires_streamable": true,
+        "description": []
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/mb/7b/druz927437bmb_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/mb/7b/druz927437bmb_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/mb/7b/druz927437bmb_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "AVRALIZE",
+          "id": 13925362,
+          "albums_count": 17,
+          "slug": "avralize",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 13925362,
+            "name": "AVRALIZE",
+            "roles": ["main-artist"]
+          }
+        ],
+        "upc": "4056813857467",
+        "released_at": 1726783200,
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922,
+          "albums_count": 637,
+          "supplier_id": 32,
+          "slug": "arising-empire-4"
+        },
+        "title": "upside down",
+        "qobuz_id": 287338919,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/upside-down-avralize/druz927437bmb",
+        "duration": 244,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [116],
+          "color": "#5eabc1",
+          "name": "Metal",
+          "id": 116,
+          "slug": "metal"
+        },
+        "maximum_channel_count": 2,
+        "id": "druz927437bmb",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-09-20",
+        "release_date_download": "2024-09-20",
+        "release_date_stream": "2024-09-20",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1743663600,
+        "streamable_at": 1743663600,
+        "hires": true,
+        "hires_streamable": true,
+        "description": []
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ca/zx/hw971g1ngzxca_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "AVRALIZE",
+          "id": 13925362,
+          "albums_count": 17,
+          "slug": "avralize",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 13925362,
+            "name": "AVRALIZE",
+            "roles": ["main-artist"]
+          }
+        ],
+        "upc": "4056813682625",
+        "released_at": 1711062000,
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922,
+          "albums_count": 637,
+          "supplier_id": 32,
+          "slug": "arising-empire-4"
+        },
+        "title": "FREAKS",
+        "qobuz_id": 252422054,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/freaks-avralize/hw971g1ngzxca",
+        "duration": 2088,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 8,
+        "genre": {
+          "path": [116],
+          "color": "#5eabc1",
+          "name": "Metal",
+          "id": 116,
+          "slug": "metal"
+        },
+        "maximum_channel_count": 2,
+        "id": "hw971g1ngzxca",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-03-22",
+        "release_date_download": "2024-03-22",
+        "release_date_stream": "2024-03-22",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1743663600,
+        "streamable_at": 1743663600,
+        "hires": true,
+        "hires_streamable": true,
+        "description": []
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/da/ud/ouedat5wnudda_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/da/ud/ouedat5wnudda_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/da/ud/ouedat5wnudda_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "AVRALIZE",
+          "id": 13925362,
+          "albums_count": 17,
+          "slug": "avralize",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 13925362,
+            "name": "AVRALIZE",
+            "roles": ["main-artist"]
+          }
+        ],
+        "upc": "4056813682786",
+        "released_at": 1709247600,
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922,
+          "albums_count": 637,
+          "supplier_id": 32,
+          "slug": "arising-empire-4"
+        },
+        "title": "OVERDOSE",
+        "qobuz_id": 252383604,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/overdose-avralize/ouedat5wnudda",
+        "duration": 1832,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 7,
+        "genre": {
+          "path": [116],
+          "color": "#5eabc1",
+          "name": "Metal",
+          "id": 116,
+          "slug": "metal"
+        },
+        "maximum_channel_count": 2,
+        "id": "ouedat5wnudda",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-03-01",
+        "release_date_download": "2024-03-01",
+        "release_date_stream": "2024-03-01",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1743836400,
+        "streamable_at": 1743836400,
+        "hires": true,
+        "hires_streamable": true,
+        "description": []
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ra/ly/he30uiwa4lyra_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ra/ly/he30uiwa4lyra_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ra/ly/he30uiwa4lyra_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "AVRALIZE",
+          "id": 13925362,
+          "albums_count": 17,
+          "slug": "avralize",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 13925362,
+            "name": "AVRALIZE",
+            "roles": ["main-artist"]
+          }
+        ],
+        "upc": "4056813667882",
+        "released_at": 1707433200,
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922,
+          "albums_count": 637,
+          "supplier_id": 32,
+          "slug": "arising-empire-4"
+        },
+        "title": "HIGHER",
+        "qobuz_id": 248549689,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/higher-avralize/he30uiwa4lyra",
+        "duration": 1511,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 6,
+        "genre": {
+          "path": [116],
+          "color": "#5eabc1",
+          "name": "Metal",
+          "id": 116,
+          "slug": "metal"
+        },
+        "maximum_channel_count": 2,
+        "id": "he30uiwa4lyra",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-02-09",
+        "release_date_download": "2024-02-09",
+        "release_date_stream": "2024-02-09",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1743836400,
+        "streamable_at": 1743836400,
+        "hires": true,
+        "hires_streamable": true,
+        "description": []
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ab/am/mwff2lq9bamab_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ab/am/mwff2lq9bamab_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ab/am/mwff2lq9bamab_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "AVRALIZE",
+          "id": 13925362,
+          "albums_count": 17,
+          "slug": "avralize",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 13925362,
+            "name": "AVRALIZE",
+            "roles": ["main-artist"]
+          }
+        ],
+        "upc": "4056813656633",
+        "released_at": 1705359600,
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922,
+          "albums_count": 637,
+          "supplier_id": 32,
+          "slug": "arising-empire-4"
+        },
+        "title": "LOTUS",
+        "qobuz_id": 244383014,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/lotus-avralize/mwff2lq9bamab",
+        "duration": 1259,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 5,
+        "genre": {
+          "path": [116],
+          "color": "#5eabc1",
+          "name": "Metal",
+          "id": 116,
+          "slug": "metal"
+        },
+        "maximum_channel_count": 2,
+        "id": "mwff2lq9bamab",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-01-16",
+        "release_date_download": "2024-01-16",
+        "release_date_stream": "2024-01-16",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1743836400,
+        "streamable_at": 1743836400,
+        "hires": false,
+        "hires_streamable": false,
+        "description": []
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/qa/i2/sqt4dyhyxi2qa_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/qa/i2/sqt4dyhyxi2qa_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/qa/i2/sqt4dyhyxi2qa_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "AVRALIZE",
+          "id": 13925362,
+          "albums_count": 17,
+          "slug": "avralize",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 13925362,
+            "name": "AVRALIZE",
+            "roles": ["main-artist"]
+          }
+        ],
+        "upc": "4056813656619",
+        "released_at": 1691704800,
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922,
+          "albums_count": 637,
+          "supplier_id": 32,
+          "slug": "arising-empire-4"
+        },
+        "title": "STAB BY STAB",
+        "qobuz_id": 244360708,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/stab-by-stab-avralize/sqt4dyhyxi2qa",
+        "duration": 178,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [116],
+          "color": "#5eabc1",
+          "name": "Metal",
+          "id": 116,
+          "slug": "metal"
+        },
+        "maximum_channel_count": 2,
+        "id": "sqt4dyhyxi2qa",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2023-08-11",
+        "release_date_download": "2023-08-11",
+        "release_date_stream": "2023-08-11",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1743836400,
+        "streamable_at": 1743836400,
+        "hires": false,
+        "hires_streamable": false,
+        "description": []
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ka/0v/qg01fsae20vka_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ka/0v/qg01fsae20vka_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ka/0v/qg01fsae20vka_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "AVRALIZE",
+          "id": 13925362,
+          "albums_count": 17,
+          "slug": "avralize",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 13925362,
+            "name": "AVRALIZE",
+            "roles": ["main-artist"]
+          }
+        ],
+        "upc": "4056813656596",
+        "released_at": 1688680800,
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922,
+          "albums_count": 637,
+          "supplier_id": 32,
+          "slug": "arising-empire-4"
+        },
+        "title": "ALIVE",
+        "qobuz_id": 244362570,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/alive-avralize/qg01fsae20vka",
+        "duration": 276,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [116],
+          "color": "#5eabc1",
+          "name": "Metal",
+          "id": 116,
+          "slug": "metal"
+        },
+        "maximum_channel_count": 2,
+        "id": "qg01fsae20vka",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2023-07-07",
+        "release_date_download": "2023-07-07",
+        "release_date_stream": "2023-07-07",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1743663600,
+        "streamable_at": 1743663600,
+        "hires": false,
+        "hires_streamable": false,
+        "description": []
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/pc/qi/su3uhdhecqipc_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/pc/qi/su3uhdhecqipc_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/pc/qi/su3uhdhecqipc_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "AVRALIZE",
+          "id": 13925362,
+          "albums_count": 17,
+          "slug": "avralize",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 13925362,
+            "name": "AVRALIZE",
+            "roles": ["main-artist"]
+          }
+        ],
+        "upc": "4056813656589",
+        "released_at": 1686261600,
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922,
+          "albums_count": 637,
+          "supplier_id": 32,
+          "slug": "arising-empire-4"
+        },
+        "title": "BRIGHT",
+        "qobuz_id": 244362472,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/bright-avralize/su3uhdhecqipc",
+        "duration": 267,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [116],
+          "color": "#5eabc1",
+          "name": "Metal",
+          "id": 116,
+          "slug": "metal"
+        },
+        "maximum_channel_count": 2,
+        "id": "su3uhdhecqipc",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2023-06-09",
+        "release_date_download": "2023-06-09",
+        "release_date_stream": "2023-06-09",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1743750000,
+        "streamable_at": 1743750000,
+        "hires": false,
+        "hires_streamable": false,
+        "description": []
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ha/yd/r927mie89ydha_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ha/yd/r927mie89ydha_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ha/yd/r927mie89ydha_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "AVRALIZE",
+          "id": 13925362,
+          "albums_count": 17,
+          "slug": "avralize",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 13925362,
+            "name": "AVRALIZE",
+            "roles": ["main-artist"]
+          }
+        ],
+        "upc": "4056813656541",
+        "released_at": 1652824800,
+        "label": {
+          "name": "Arising Empire",
+          "id": 1130922,
+          "albums_count": 637,
+          "supplier_id": 32,
+          "slug": "arising-empire-4"
+        },
+        "title": "FREAKS",
+        "qobuz_id": 244361847,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/freaks-avralize/r927mie89ydha",
+        "duration": 251,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [116],
+          "color": "#5eabc1",
+          "name": "Metal",
+          "id": 116,
+          "slug": "metal"
+        },
+        "maximum_channel_count": 2,
+        "id": "r927mie89ydha",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2022-05-18",
+        "release_date_download": "2022-05-18",
+        "release_date_stream": "2022-05-18",
+        "purchasable": true,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": true,
+        "displayable": true,
+        "purchasable_at": 1743836400,
+        "streamable_at": 1743836400,
+        "hires": false,
+        "hires_streamable": false,
+        "description": []
+      }
+    ]
+  },
+  "description": ""
+}

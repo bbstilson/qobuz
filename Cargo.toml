@@ -3,6 +3,10 @@ name    = "qobuz"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "qobuz"
+path = "src/main.rs"
+
 [dependencies]
 anyhow     = { version = "1" }
 chrono     = { version = "0.4" }
@@ -12,3 +16,8 @@ rusqlite   = { version = "0.36", features = ["bundled"] }
 serde      = { version = "1", features = ["derive"] }
 serde_json = { version = "1" }
 tokio      = { version = "1.44", features = ["full"] }
+
+[dev-dependencies]
+assert_cmd = { version = "2.0" }
+rand       = { version = "0.9" }
+wiremock   = { version = "0.6" }

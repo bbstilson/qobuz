@@ -7,9 +7,9 @@ on conflict (id) do nothing;
 ";
 
 const INSERT_TRACK_2_RELEASE: &str = "
-insert into artists_2_releases (artist_id, release_id)
+insert into tracks_2_releases (release_id, track_id)
 values (?1, ?2)
-on conflict (artist_id, release_id) do nothing;
+on conflict (release_id, track_id) do nothing;
 ";
 
 pub fn insert_batch(db: &Db, release_id: &str, tracks: Vec<Track>) -> anyhow::Result<()> {

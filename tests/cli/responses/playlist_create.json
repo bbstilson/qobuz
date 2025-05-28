@@ -1,0 +1,17 @@
+{
+  "id": 32500402,
+  "name": "test",
+  "description": "",
+  "tracks_count": 0,
+  "users_count": 0,
+  "duration": 0,
+  "public_at": false,
+  "created_at": 1748401715,
+  "updated_at": 1748401715,
+  "is_public": false,
+  "is_collaborative": false,
+  "owner": {
+    "id": 2596068,
+    "name": "testman"
+  }
+}

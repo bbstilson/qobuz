@@ -1,19 +1,19 @@
-mod api;
-mod app;
-mod data;
-mod types;
-
 use app::App;
 use clap::Parser;
 
+mod api;
+pub mod app;
+mod data;
+mod types;
+
 #[derive(Debug, clap::Parser)]
-struct Cli {
+pub struct Cli {
     #[command(subcommand)]
-    command: Command,
+    pub command: Command,
 }
 
 #[derive(Debug, clap::Subcommand)]
-enum Command {
+pub enum Command {
     /// Load an artist's releases into the database.
     Load { artist_id: u32 },
     /// Check for new music from all the artists in the database.

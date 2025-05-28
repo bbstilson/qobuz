@@ -2,7 +2,7 @@ use crate::types::ReleaseType;
 
 use crate::data::db::Db;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 #[allow(clippy::struct_field_names)]
 pub struct Release {
     pub id: String,
@@ -50,4 +50,17 @@ pub fn get_all_ids_for_artist(db: &Db, artist_id: u32) -> anyhow::Result<Vec<Str
     let releases = stmt.query_map((artist_id,), |row| row.get(0))?;
     let result = releases.map(|a| a.unwrap()).collect();
     Ok(result)
+}
+
+const BULK_VERIFY: &str = "
+update releases
+set verified = true
+where id in (?1);
+";
+
+pub fn bulk_verify(db: &Db, release_ids: &[String]) -> anyhow::Result<()> {
+    let mut stmt = db.conn.prepare(BULK_VERIFY)?;
+    let params = rusqlite::params_from_iter(release_ids.iter());
+    stmt.execute(params)?;
+    Ok(())
 }

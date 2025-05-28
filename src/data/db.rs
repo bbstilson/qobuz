@@ -25,6 +25,7 @@ create table if not exists releases (
     title text not null,
     created_at timestamp default (datetime('now', 'localtime')) not null,
     release_type_id text not null,
+    verified boolean not null default false,
     foreign key (release_type_id) references release_type (variant)
 );
 
