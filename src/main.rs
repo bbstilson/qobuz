@@ -22,6 +22,8 @@ pub enum Command {
     List,
     /// Generate a playlist with all the latest releases.
     GenPlaylist,
+    /// Check for new music and put all the latest releases into a playlist.
+    CheckGen,
 }
 
 #[tokio::main]
@@ -35,6 +37,10 @@ async fn main() -> anyhow::Result<()> {
         Command::Check => app.check_for_new_releases().await?,
         Command::List => app.list_artists()?,
         Command::GenPlaylist => app.gen_playlist().await?,
+        Command::CheckGen => {
+            app.check_for_new_releases().await?;
+            app.gen_playlist().await?;
+        }
     }
 
     Ok(())

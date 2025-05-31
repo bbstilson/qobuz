@@ -190,6 +190,12 @@ impl App {
     pub async fn gen_playlist(&self) -> anyhow::Result<()> {
         let name = chrono::Local::now().date_naive().to_string();
         let track_ids = tracks::get_latest(&self.db)?;
+
+        if track_ids.is_empty() {
+            println!("No new tracks. Skipping playlist creation");
+            return Ok(());
+        }
+
         let id = self.api.create_playlist(&name, track_ids).await?;
         playlists::insert(
             &self.db,
