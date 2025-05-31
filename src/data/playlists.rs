@@ -1,6 +1,6 @@
 use crate::data::db::Db;
 
-#[derive(Debug, Default)]
+#[derive(Debug)]
 pub struct Playlist {
     pub id: u32,
     pub name: String,

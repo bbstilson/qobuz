@@ -22,21 +22,21 @@ pub fn insert_batch(db: &Db, release_id: &str, tracks: Vec<Track>) -> anyhow::Re
     Ok(())
 }
 
-const GET_AFTER: &str = "
+const GET_LATEST: &str = "
 select t.id from tracks t
-join tracks_2_releases t2r
-on t2r.track_id = t.id
-join releases r
-on r.id = t2r.release_id
-where r.created_at >= ?1;
+join tracks_2_releases t2r on t2r.track_id = t.id
+join releases r on r.id = t2r.release_id
+where r.created_at >= (
+    select created_at from playlists
+    order by created_at desc
+    limit 1
+);
 ";
 
-/// Gets all tracks inserted into the database after the provided timestamp.
-/// This timestamp *not* when the track was released. Just when it was added to
-/// the database.
-pub fn get_after(db: &Db, ts: &str) -> anyhow::Result<Vec<u32>> {
-    let mut stmt = db.conn.prepare(GET_AFTER)?;
-    let releases = stmt.query_map((ts,), |row| row.get(0))?;
-    let result = releases.map(|a| a.unwrap()).collect();
-    Ok(result)
+/// Gets all tracks that haven't been loaded into a playlist.
+pub fn get_latest(db: &Db) -> anyhow::Result<Vec<u32>> {
+    let mut stmt = db.conn.prepare(GET_LATEST)?;
+    let latest_tracks = stmt.query_map([], |row| row.get(0)).unwrap();
+    let latest_track_ids = latest_tracks.map(|a| a.unwrap()).collect();
+    Ok(latest_track_ids)
 }

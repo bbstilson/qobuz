@@ -183,19 +183,19 @@ impl App {
         Ok(())
     }
 
-    /// Generate a playlist for latest releases.
+    /// Generate a playlist for latest releases that haven't been put into a
+    /// playlist.
     /// # Errors
     /// Will return `Err` if there's an issue.
     pub async fn gen_playlist(&self) -> anyhow::Result<()> {
         let name = chrono::Local::now().date_naive().to_string();
-        let track_ids = tracks::get_after(&self.db, &name)?;
+        let track_ids = tracks::get_latest(&self.db)?;
         let id = self.api.create_playlist(&name, track_ids).await?;
         playlists::insert(
             &self.db,
             &playlists::Playlist {
                 id,
                 name: name.clone(),
-                ..Default::default()
             },
         )
         .context("playlists::insert")?;
