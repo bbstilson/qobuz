@@ -12,6 +12,7 @@ values (?1, ?2)
 on conflict (id) do nothing;
 ";
 
+#[tracing::instrument(skip(db))]
 pub fn insert(db: &Db, playlist: &Playlist) -> anyhow::Result<()> {
     let Playlist { id, name, .. } = playlist;
     db.conn.execute(INSERT, (id, name))?;

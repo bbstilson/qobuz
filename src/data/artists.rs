@@ -11,6 +11,7 @@ insert into artists (id, name) values (?1, ?2)
 on conflict (id) do nothing;
 ";
 
+#[tracing::instrument(skip(db))]
 pub fn insert(db: &Db, artist: &Artist) -> anyhow::Result<()> {
     db.conn.execute(INSERT, (&artist.id, &artist.name))?;
 
@@ -19,6 +20,7 @@ pub fn insert(db: &Db, artist: &Artist) -> anyhow::Result<()> {
 
 const GET_ALL: &str = "select id, name from artists;";
 
+#[tracing::instrument(skip(db))]
 pub fn get_all(db: &Db) -> anyhow::Result<Vec<Artist>> {
     let mut stmt = db.conn.prepare(GET_ALL)?;
     let artists = stmt.query_map([], |row| {

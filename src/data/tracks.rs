@@ -12,6 +12,7 @@ values (?1, ?2)
 on conflict (release_id, track_id) do nothing;
 ";
 
+#[tracing::instrument(skip(db))]
 pub fn insert_batch(db: &Db, release_id: &str, tracks: Vec<Track>) -> anyhow::Result<()> {
     let mut track_stmt = db.conn.prepare(INSERT_TRACK)?;
     let mut track_2_release_stmt = db.conn.prepare(INSERT_TRACK_2_RELEASE)?;
@@ -34,6 +35,7 @@ where r.created_at >= (
 ";
 
 /// Gets all tracks that haven't been loaded into a playlist.
+#[tracing::instrument(skip(db))]
 pub fn get_latest(db: &Db) -> anyhow::Result<Vec<u32>> {
     let mut stmt = db.conn.prepare(GET_LATEST)?;
     let latest_tracks = stmt.query_map([], |row| row.get(0)).unwrap();

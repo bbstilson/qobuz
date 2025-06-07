@@ -1,3 +1,5 @@
+use std::rc::Rc;
+
 use crate::types::ReleaseType;
 
 use crate::data::db::Db;
@@ -25,6 +27,7 @@ values (?1, ?2)
 on conflict (artist_id, release_id) do nothing;
 ";
 
+#[tracing::instrument(skip(db))]
 pub fn insert_batch(db: &Db, artist_id: u32, releases: &[Release]) -> anyhow::Result<()> {
     let mut release_stmt = db.conn.prepare(INSERT_RELEASE)?;
     let mut artist_2_release_stmt = db.conn.prepare(INSERT_ARTIST_2_RELEASE)?;
@@ -45,6 +48,7 @@ join artists_2_releases a2r on a2r.release_id = r.id
 where a2r.artist_id = ?1;
 ";
 
+#[tracing::instrument(skip(db))]
 pub fn get_all_ids_for_artist(db: &Db, artist_id: u32) -> anyhow::Result<Vec<String>> {
     let mut stmt = db.conn.prepare(GET_ALL_IDS_FOR_ARTIST)?;
     let releases = stmt.query_map((artist_id,), |row| row.get(0))?;
@@ -55,12 +59,21 @@ pub fn get_all_ids_for_artist(db: &Db, artist_id: u32) -> anyhow::Result<Vec<Str
 const BULK_VERIFY: &str = "
 update releases
 set verified = true
-where id in (?1);
+where id in (
+    select value from rarray(?1)
+);
 ";
 
+#[tracing::instrument(skip(db))]
 pub fn bulk_verify(db: &Db, release_ids: &[String]) -> anyhow::Result<()> {
     let mut stmt = db.conn.prepare(BULK_VERIFY)?;
-    let params = rusqlite::params_from_iter(release_ids.iter());
-    stmt.execute(params)?;
+    let values = Rc::new(
+        release_ids
+            .iter()
+            .cloned()
+            .map(rusqlite::types::Value::from)
+            .collect::<Vec<_>>(),
+    );
+    stmt.execute([values])?;
     Ok(())
 }

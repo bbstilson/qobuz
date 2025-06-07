@@ -8,6 +8,8 @@ impl Db {
     pub fn new(db_path: &str) -> anyhow::Result<Self> {
         let conn = Connection::open(db_path)?;
 
+        rusqlite::vtab::array::load_module(&conn)?;
+
         Ok(Self { conn })
     }
 }

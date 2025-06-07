@@ -4,6 +4,7 @@ use clap::Parser;
 mod api;
 pub mod app;
 mod data;
+mod logging;
 mod types;
 
 #[derive(Debug, clap::Parser)]
@@ -28,6 +29,9 @@ pub enum Command {
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
+    let subscriber = logging::get_subscriber("qobuz".into(), "error".into(), std::io::stdout);
+    logging::init_subscriber(subscriber);
+
     let args = Cli::parse();
 
     let app = App::init()?;

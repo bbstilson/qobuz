@@ -1,6 +1,7 @@
 use std::collections::{HashMap, HashSet};
 
 use anyhow::Context;
+use indicatif::ProgressIterator;
 
 use crate::{
     api::Api,
@@ -74,7 +75,7 @@ impl App {
         let all_artists = artists::get_all(&self.db)?;
         println!("Checking {} artists\n", all_artists.len());
         let mut all_new_releases = HashMap::new();
-        for artist in all_artists {
+        for artist in all_artists.iter().progress() {
             let existing_release_ids = releases::get_all_ids_for_artist(&self.db, artist.id)?
                 .into_iter()
                 .collect::<HashSet<_>>();
@@ -133,7 +134,7 @@ impl App {
                     continue;
                 }
 
-                loaded_releases.push(release.title);
+                loaded_releases.push(release.clone());
                 tracks::insert_batch(&self.db, &release.id, tracks)
                     .context("tracks::insert_batch")?;
             }
@@ -144,7 +145,14 @@ impl App {
             }
 
             // Finalize the loaded releases.
-            releases::bulk_verify(&self.db, &loaded_releases).context("releases::bulk_verify")?;
+            releases::bulk_verify(
+                &self.db,
+                &loaded_releases
+                    .iter()
+                    .map(|r| r.id.clone())
+                    .collect::<Vec<_>>(),
+            )
+            .context("releases::bulk_verify")?;
 
             // Let the user know what happened.
             let num_releases = loaded_releases.len();
@@ -153,13 +161,10 @@ impl App {
             } else {
                 "releases"
             };
-            println!(
-                "Found {num_releases} new {release_msg} for {}!",
-                artist.name
-            );
+            println!("Found {num_releases} new {release_msg} for {}", artist.name);
             let release_log = loaded_releases
                 .iter()
-                .map(|r| format!("\t • {r}"))
+                .map(|r| format!("\t • {}", r.title))
                 .collect::<Vec<_>>()
                 .join("\n");
             println!("{release_log}");
