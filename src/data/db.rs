@@ -62,6 +62,7 @@ insert into release_type (variant) values
     ('Download'),
     ('EpSingle'),
     ('Live'),
+    ('AwardedReleases'),
     ('Other')
 on conflict (variant) do nothing;
 

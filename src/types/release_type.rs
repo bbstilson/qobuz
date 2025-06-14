@@ -12,6 +12,7 @@ pub enum ReleaseType {
     Download,
     EpSingle,
     Live,
+    AwardedReleases,
     Other,
 }
 
@@ -23,6 +24,7 @@ impl ToSql for ReleaseType {
             Self::Download => "Download",
             Self::EpSingle => "EpSingle",
             Self::Live => "Live",
+            Self::AwardedReleases => "AwardedReleases",
             Self::Other => "Other",
         };
         Ok(ToSqlOutput::from(rep))
@@ -37,6 +39,7 @@ impl FromSql for ReleaseType {
             "Download" => Ok(Self::Download),
             "EpSingle" => Ok(Self::EpSingle),
             "Live" => Ok(Self::Live),
+            "AwardedReleases" => Ok(Self::AwardedReleases),
             "Other" => Ok(Self::Other),
             _ => Err(FromSqlError::InvalidType),
         }
