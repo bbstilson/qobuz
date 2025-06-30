@@ -42,16 +42,22 @@ pub fn insert_batch(db: &Db, artist_id: u32, releases: &[Release]) -> anyhow::Re
     Ok(())
 }
 
-const GET_ALL_IDS_FOR_ARTIST: &str = "
-select id from releases r
-join artists_2_releases a2r on a2r.release_id = r.id 
+const GET_ALL_FOR_ARTIST: &str = "
+select id, title, release_type_id from releases r
+join artists_2_releases a2r on a2r.release_id = r.id
 where a2r.artist_id = ?1;
 ";
 
 #[tracing::instrument(skip(db))]
-pub fn get_all_ids_for_artist(db: &Db, artist_id: u32) -> anyhow::Result<Vec<String>> {
-    let mut stmt = db.conn.prepare(GET_ALL_IDS_FOR_ARTIST)?;
-    let releases = stmt.query_map((artist_id,), |row| row.get(0))?;
+pub fn get_all_for_artist(db: &Db, artist_id: u32) -> anyhow::Result<Vec<Release>> {
+    let mut stmt = db.conn.prepare(GET_ALL_FOR_ARTIST)?;
+    let releases = stmt.query_map((artist_id,), |row| {
+        Ok(Release {
+            id: row.get(0)?,
+            title: row.get(1)?,
+            release_type: row.get(2)?,
+        })
+    })?;
     let result = releases.map(|a| a.unwrap()).collect();
     Ok(result)
 }

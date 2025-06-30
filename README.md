@@ -19,10 +19,10 @@ Load the artists you want to follow:
 cargo r -- load <artist_id>
 ```
 
-Then, periodically check for new music:
+Then, periodically check for new music and generate a new playlist:
 
 ```bash
-cargo r -- check
+cargo r -- check-gen
 ```
 
 ## Developing

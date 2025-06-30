@@ -2,6 +2,7 @@ use std::collections::{HashMap, HashSet};
 
 use anyhow::Context;
 use indicatif::ProgressIterator;
+use itertools::Itertools;
 
 use crate::{
     api::Api,
@@ -76,8 +77,9 @@ impl App {
         println!("Checking {} artists\n", all_artists.len());
         let mut all_new_releases = HashMap::new();
         for artist in all_artists.iter().progress() {
-            let existing_release_ids = releases::get_all_ids_for_artist(&self.db, artist.id)?
+            let existing_release_ids = releases::get_all_for_artist(&self.db, artist.id)?
                 .into_iter()
+                .map(|r| r.id)
                 .collect::<HashSet<_>>();
 
             let api_releases = self
@@ -164,7 +166,7 @@ impl App {
             println!("Found {num_releases} new {release_msg} for {}", artist.name);
             let release_log = loaded_releases
                 .iter()
-                .map(|r| format!("\t • {}", r.title))
+                .map(|r| format!("  • {}", r.title))
                 .collect::<Vec<_>>()
                 .join("\n");
             println!("{release_log}");
@@ -184,6 +186,29 @@ impl App {
         artists.sort_by_key(|a| a.to_lowercase());
         for artist in artists {
             println!("{artist}");
+        }
+        Ok(())
+    }
+
+    pub fn list_releases_for_artist(&self, artist: String) -> anyhow::Result<()> {
+        if let Some(artist_id) = artists::get_id_by_name(&self.db, &artist)? {
+            println!("Releases for {artist}");
+            let mut releases_by_type = releases::get_all_for_artist(&self.db, artist_id)?
+                .into_iter()
+                .into_group_map_by(|ar| ar.release_type)
+                .into_iter()
+                .collect::<Vec<_>>();
+
+            releases_by_type.sort_by_key(|r| r.0);
+
+            for (release_type, releases) in releases_by_type {
+                println!("  {release_type:?}");
+                for release in releases {
+                    println!("    - {}", release.title);
+                }
+            }
+        } else {
+            println!("Couldn't find an artist by that name.")
         }
         Ok(())
     }

@@ -4,7 +4,7 @@ use rusqlite::{
 };
 use serde::Deserialize;
 
-#[derive(Deserialize, Debug, Clone, Copy)]
+#[derive(Deserialize, Debug, Clone, Copy, Eq, PartialEq, Hash, PartialOrd, Ord)]
 #[serde(rename_all = "camelCase")]
 pub enum ReleaseType {
     Album,
@@ -16,9 +16,9 @@ pub enum ReleaseType {
     Other,
 }
 
-impl ToSql for ReleaseType {
-    fn to_sql(&self) -> rusqlite::Result<ToSqlOutput<'_>> {
-        let rep = match self {
+impl ReleaseType {
+    pub fn to_str(self) -> &'static str {
+        match self {
             Self::Album => "Album",
             Self::Compilation => "Compilation",
             Self::Download => "Download",
@@ -26,8 +26,13 @@ impl ToSql for ReleaseType {
             Self::Live => "Live",
             Self::AwardedReleases => "AwardedReleases",
             Self::Other => "Other",
-        };
-        Ok(ToSqlOutput::from(rep))
+        }
+    }
+}
+
+impl ToSql for ReleaseType {
+    fn to_sql(&self) -> rusqlite::Result<ToSqlOutput<'_>> {
+        Ok(ToSqlOutput::from(self.to_str()))
     }
 }
 

@@ -3,10 +3,11 @@ use crate::helpers;
 const HELP_MSG: &str = "Usage: qobuz <COMMAND>
 
 Commands:
-  load          Load an artist\'s releases into the database
+  load          Load an artist's releases into the database
   check         Check for new music from all the artists in the database
   list          List all the artists in the database
   gen-playlist  Generate a playlist with all the latest releases
+  check-gen     Check for new music and put all the latest releases into a playlist
   help          Print this message or the help of the given subcommand(s)
 
 Options:
@@ -55,8 +56,8 @@ async fn list() {
 
 const CHECK_1: &str = "Checking 1 artists
 
-Found 1 new release for AVRALIZE!
-\t • helium
+Found 1 new release for AVRALIZE
+  • helium
 ";
 
 #[tokio::test]
