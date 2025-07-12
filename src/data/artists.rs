@@ -8,6 +8,18 @@ pub struct Artist {
     pub name: String,
 }
 
+const GET_BY_ID: &str = "
+select name from artists
+where id = ?1
+";
+
+#[tracing::instrument(skip(db))]
+pub fn get_by_id(db: &Db, artist_id: u32) -> anyhow::Result<Option<String>> {
+    let mut stmt = db.conn.prepare(GET_BY_ID)?;
+    let artist = stmt.query_one((artist_id,), |row| row.get(0)).optional()?;
+    Ok(artist)
+}
+
 const INSERT: &str = "
 insert into artists (id, name) values (?1, ?2)
 on conflict (id) do nothing;

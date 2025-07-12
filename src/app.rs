@@ -36,6 +36,11 @@ impl App {
     /// # Errors
     /// Will return `Err` if there's an issue.
     pub async fn load_artist(&self, artist_id: u32) -> anyhow::Result<()> {
+        if let Some(name) = artists::get_by_id(&self.db, artist_id)? {
+            println!("Already loaded data for '{name}'");
+            return Ok(());
+        }
+
         let artist_page = self.api.get_artist_page(artist_id).await?;
 
         println!("Loading data for '{}'", artist_page.name.display);
